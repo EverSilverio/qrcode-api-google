@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');  
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: black;
+}
+
+html {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ccc;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    background-color: #ddd;
+    padding: 15px 20px;
+    text-align: center;
+    width: 500px;;
+}
+
+.help {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    opacity: .5;
+    transition-duration: .5s;
+}
+
+.help:hover {
+    opacity: 1;
+}
+
+.qrcode {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.qrcode__form {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.qrcode__form input {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.qrcode__form button {
+    height: 35px;
+    width: 80px;
+}
+
+input {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+
+    box-shadow: 3px 3px 5px #aaa;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+input:hover {
+    box-shadow: 3px 3px 8px #555;
+    transition-duration: .5s;
+}
+
+.btn {
+    background-color: #3B82F6;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #aaa;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}      
+
+.btn:hover {
+    background-color: rgb(38, 117, 38);
+    box-shadow: 3px 3px 8px #555;
+    transition-duration: .5s;
+}   
+
+.legend {
+    margin-bottom: 10px;
+    text-align: left;
+    display: none;
+}
+
+.legend li {
+    list-style-position: inside;
+}
+
+#help:target {
+    display: block;
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        width: 360px;
+    }
+    .qrcode__form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .qrcode__form input {
+        margin-bottom: 10px;
+        height: 35px;
+    }
+    
+    .qrcode__form button {
+        height: 35px;
+        width: 100%;
+    }
+}

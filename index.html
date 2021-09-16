@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <title>Gerador QrCode</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <span></span>
+            <h1>Gerador QR Code</h1>
+            <a  class="help open" href="#help"><img src="img/help.png" alt="Ajuda"></a>
+            <span class="legend" id="help" title="clique na mensagem pra fechar">
+                <a href="">
+                    <ul>
+                        <li>Informe por exemplo a url do seu perfil linkedIn ou do seu site: "https://meusite.com.br"</li>
+                        <li>Clique em Gerar!</li>
+                        <li>Depois é só apontar a câmera do seu celular ou salvar o QrCode e usar como quiser!</li>
+                    </ul>
+                </a>
+            </span>
+            <div class="qrcode">
+                <div class="qrcode__form">
+                    <input type="text" name="url" id="url" placeholder="Informe o conteúdo do QRCode">
+                    <button class="btn" id="#gerar" title="Gerar QRCode" onclick="loadQrCode()">Gerar!</button>
+                </div>
+                <img id="qrcode" src="">
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
