@@ -14,14 +14,15 @@ a:link, a:visited, a:hover, a:active {
 html {
     font-family: Poppins, Arial, Helvetica, sans-serif;
     font-size: 62.5%;
+    background-color: #ccc;
 }
+
 
 main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ccc;
-    height: 100vh;
+    padding-top: 8px;
 }
 
 .container {

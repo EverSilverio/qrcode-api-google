@@ -6,22 +6,26 @@ var qrcodeUrl = apiChart + url;
 function loadQrCode() {
     let qrcode = document.querySelector('#qrcode');
     let inputUrl = document.querySelector('#url');
-    let urlQrCode = document.querySelector('#urlQrCode');
+
+    qrcode.setAttribute('src', './img/loading.gif');
 
     url = inputUrl.value;
-    urlQrCode.innerHTML = url;
 
+    // replace & por %26 -  API nao entende "&"
     url = url.replace('&', '%26');
+
     qrcodeUrl = apiChart + url;
 
-    console.log(qrcodeUrl);
-    qrcode.setAttribute('src', qrcodeUrl);
+    setTimeout(() => {
+        qrcode.setAttribute('src', qrcodeUrl);    
+    }, 10);
 }
 
 window.onload = function() {
     let qrcode = document.querySelector('#qrcode');
     let inputUrl = document.querySelector('#url');
 
+    inputUrl.value = url;
     qrcode.setAttribute('src', qrcodeUrl)
         
     inputUrl.onchange = function(e) {
